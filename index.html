@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>柯建銘模擬器</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>柯建銘模擬器</h1>
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-label">分數</span>
+          <span id="score" class="stat-value">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">時間</span>
+          <span id="timer" class="stat-value">30</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="controls">
+      <button id="startBtn">開始遊戲</button>
+      <div id="difficulty" class="difficulty-indicator">難度: Lv.1</div>
+    </div>
+
+    <div class="leaderboard">
+      <h2>排行榜</h2>
+      <ol id="leaderboardList">
+        <li class="empty">暫無記錄</li>
+      </ol>
+      <button id="clearScoresBtn" class="clear-btn">清除記錄</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal">
+      <h2>遊戲結束</h2>
+      <p class="final-label">你的分數</p>
+      <p class="final-score" id="finalScore">0</p>
+      <p class="new-record hidden" id="newRecord">新紀錄！</p>
+      <button id="restartBtn">再玩一次</button>
+      <button id="closeModalBtn" class="close-btn">關閉</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
